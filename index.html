@@ -1,0 +1,129 @@
+
+<html>
+
+<head>
+<title>Space Age</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+
+
+</head>
+
+<body>
+
+<div>
+<canvas id="myCanvas" width="578" height="200"></canvas>
+	<img src="img/title.png"  style="position: absolute; left: 35vh; top:20vh; z-index: 2; height: 8vh" id="title"/>
+	<img src="img/play.png" id="play1" style="position: absolute; left: 60vh; top:40vh; z-index: 2; height: 5vh" onclick="play()"/>
+	<img src="img/instruct.png" style="position: absolute; left: 50vh; top:50vh; z-index: 2; height: 5vh" id="instruct" data-toggle="modal" data-target="#myModal"/>
+	<img src="img/leader.png" style="position: absolute; left: 66vh; top:60vh; z-index: 2; height: 5vh" id="leader" data-toggle="modal" data-target="#leaders"/>
+	<video id="vid" style="position: absolute; left: 0px; top:70vh; z-index: 2; height: 30vh; width:80vh"  autoplay muted></video>
+	
+	
+	</div>
+	
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Instructions</h4>
+      </div>
+      <div class="modal-body">
+        This is a motion active game. In order to play this game, make sure you have a computer with a webcam and a small magenta/pink slice of paper. That piece of paper will be your tracking device. The objective of this game is to kill the monsters, by dragging the cursor above it. You have 20 seconds to kill as many monsters as you can. Good Luck!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+	
+		<div class="modal fade" id="leaders" tabindex="-1" role="dialog" aria-labelledby="leaderLabel" aria-hidden="true">
+<div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Leaders</h4>
+      </div>
+      <div class="modal-body">
+		  
+        <div class="alert alert-success" role="alert">
+			<!--<span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span><b>1.</b> mango_man<span style="margin-left: 70vh;">54</span>
+			</br>
+			<span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span><b>2.</b> mango_man<span  style="margin-left: 70vh;">51</span>
+		  </br>
+			<span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span><b>3.</b> yolo<span class = "lol" >48</span>
+		</br>
+			<span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span><b>4.</b> mango_man<span  style="margin-left: 70vh;">45</span>
+	</br>
+			<span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span><b>5.</b> winner<span  style="margin-left: 70vh;">43</span>-->
+			
+			<table>
+		  	<tr>
+			<td><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span><b>1.</b> mango_man</td>
+			<td width="100"><span class="lol">54</span></td>
+		  </tr>
+						  	<tr>
+			<td><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span><b>2.</b>archit</td>
+			<td width="100"><span class="lol">50</span></td>
+		  </tr>
+						  	<tr>
+			<td><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span><b>3.</b> mango</td>
+			<td width="100"><span class="lol">48</span></td>
+		  </tr>
+						  	<tr>
+			<td><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span><b>4.</b> yolo</td>
+			<td width="100"><span class="lol">45</span></td>
+		  </tr>
+						  	<tr>
+			<td><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span><b>5.</b>yolo_swag</td>
+			<td width="100"><span class="lol">40</span></td>
+		  </tr>
+		</table>
+			
+		</div>
+		  
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+	
+		<script src = "https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src='https://cdn.firebase.com/js/client/2.0.6/firebase.js'></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<script src = "js/index.js"></script>
+	<script src="js/vendor/tracking-min.js"></script>
+  <script src="js/vendor/color_camera_gui.js"></script>
+
+		<div class="modal fade" id="leaders" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Leaders</h4>
+      </div>
+      <div class="modal-body">
+      <form>
+Username: <input type="text" name="FirstName" value="Username" id="user"><br>
+		  <button onclick = "sub()">Submit</button>
+</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>
